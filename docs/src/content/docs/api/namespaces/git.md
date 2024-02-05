@@ -14,7 +14,7 @@ All content is auto-generated using a oneRepo command:
 -->
 
 <!-- start-onerepo-sentinel -->
-<!-- @generated SignedSource<<d83a1caca436431e23f5ab96e713065a>> -->
+<!-- @generated SignedSource<<41815d5074e1e87a4ac7afbb775f60b2>> -->
 
 This package is also canonically available from the `onerepo` package under the `git` namespace or methods directly from `@onerepo/git`:
 
@@ -59,7 +59,7 @@ restoreUnstaged(): Promise<void>
 
 Restores the unstaged changes previously backed up by [`saveUnstaged()`](#saveunstaged).
 
-This command will go threw a series of attempts to ressurect upon failure, eventually throwing an error if unstaged changes cannot be reapplied.
+This command will go through a series of attempts to ressurect upon failure, eventually throwing an error if unstaged changes cannot be reapplied.
 
 **Returns:** `Promise`\<`void`\>  
 **Source:** [modules/git/src/workflow.ts](https://github.com/paularmstrong/onerepo/blob/main/modules/git/src/workflow.ts)

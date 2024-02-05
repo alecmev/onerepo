@@ -100,6 +100,7 @@ export class StagingWorkflow {
 
 		process.on('SIGINT', async () => {
 			await this.restoreUnstaged();
+			await remove(this.#graph.root.resolve('.git/index.lock'));
 			process.exit(127);
 		});
 
@@ -193,7 +194,7 @@ export class StagingWorkflow {
 	/**
 	 * Restores the unstaged changes previously backed up by {@link StagingWorkflow.saveUnstaged | `saveUnstaged()`}.
 	 *
-	 * This command will go threw a series of attempts to ressurect upon failure, eventually throwing an error if unstaged changes cannot be reapplied.
+	 * This command will go through a series of attempts to ressurect upon failure, eventually throwing an error if unstaged changes cannot be reapplied.
 	 */
 	async restoreUnstaged() {
 		const step = this.#logger.createStep('Restoring unstaged changes');
